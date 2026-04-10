@@ -3,7 +3,7 @@ This is a MATLAB package that implements the smoothing moving ball approximation
 
 $$\eqalign{
 	\min\limits_{x\in ℝ^{n}} & \sum_{i=1}^{n}\left( \frac{1}{4} d_i x_i^4 + \frac{1}{3} c_i |x_i|^3 \right)+ x^\top Q x + b^{\top}x + \rho ‖x‖_1 \\
-	\text{s.t.} & A_0 + x_1 A_1 + \cdots + x_n A_0  \preceq 0,
+	\text{s.t.} & A_0 + x_1 A_1 + \cdots + x_n A_0  \succeq 0,
 }$$
 
 where $\rho$ is a nonnegative number, $b$ is a real-valued vector of dimension $n$, $c$ and $d$ are real-valued nonnegative vectors of dimension $n$, $Q$ is a symmetric positive semidefinite matrix of dimension $n$ by $n$, and $A_i$ are symmetric positive semidefinite matrices of dimension $m$ by $m$ for $i=0,...,n$.
