@@ -11,7 +11,7 @@ The performance of *s*MBA is compared with CVX using the SDPT3 solver.
 For further details, please refer to our paper in [[1]].
 
 # Matlab source codes
-- **demo_QCQP.m**\
+- **demo_NSDP.m**\
 A demo of the numerical experiments in [[1]].
 
 - **NSDP.m**\
