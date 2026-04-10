@@ -15,10 +15,10 @@ For further details, please refer to our paper in [[1]].
 A demo of the numerical experiments in [[1]].
 
 - **NSDP.m**\
-A function that generates the data of a convex QCQP.
+A function that generates the data of a convex NSDP.
 
 - **sMBA_NSDP.m**\
-The implementation of sMBA for solving QCQP-ℓ₁.
+The implementation of sMBA for solving NSDP-ℓ₁.
 
 - **CaseSg.m** and **SubP_alpha.m**\
 The implementations of the root-finding scheme described in [[2], Appendix A], which we use to solve the subproblem of *s*MBA (i.e., [[1], (3.1)]). The codes are hosted by Pong T. K. and are available at [https://www.polyu.edu.hk/ama/profile/pong/MBA_l1vl2/.](https://www.polyu.edu.hk/ama/profile/pong/MBA_l1vl2/)
