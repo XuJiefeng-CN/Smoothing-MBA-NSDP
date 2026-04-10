@@ -12,7 +12,10 @@ For further details, please refer to our paper in [[1]].
 
 # Matlab source codes
 - **demo_NSDP.m**\
-A demo of the numerical experiments in [[1]].
+A demo that evaluates the effect of different decay rates of ${\mu_k}$ as described in [[1]]
+
+- **demo_NSDP_rs.m**\
+A demo that tests sMBA across a range of problem dimensions, as presented in [1].
 
 - **NSDP.m**\
 A function that generates the data of a convex NSDP.
