@@ -6,8 +6,7 @@ $$\eqalign{
 	\text{s.t.} & A_0 + x_1 A_1 + \cdots + x_n A_n  \succeq 0,
 }$$
 
-where $\rho$ is a nonnegative number, $b$ is a real-valued vector of dimension $n$, 
-$c$ and $d$ are real-valued nonnegative vectors of dimension $n$, $Q \in S^n_+$, $A_0 \in S^m_{++}$ and $A_i \in S^{m}_+$ for $i=1,...,n$.
+where $\rho \ge 0$, $b \in R^n$, $c\in R^n_+$, $d\in R^n_+$, $Q \in S^n_+$, $A_0 \in S^m_{++}$ and $A_i \in S^{m}_+$ for $i=1,...,n$.
 The performance of *s*MBA is compared with CVX using the SDPT3 solver.
 For further details, please refer to our paper in [[1]].
 
