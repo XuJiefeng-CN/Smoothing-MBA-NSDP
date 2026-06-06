@@ -3,16 +3,19 @@ This is a MATLAB package that implements the smoothing moving ball approximation
 
 $$\eqalign{
 	\min\limits_{x\in ℝ^{n}} & \sum_{i=1}^{n}\left( \frac{1}{4} d_i x_i^4 + \frac{1}{3} c_i |x_i|^3 \right)+ x^\top Q x + b^{\top}x + \rho ‖x‖_1 \\
-	\text{s.t.} & A_0 + x_1 A_1 + \cdots + x_n A_0  \succeq 0,
+	\text{s.t.} & A_0 + x_1 A_1 + \cdots + x_n A_n  \succeq 0,
 }$$
 
-where $\rho$ is a nonnegative number, $b$ is a real-valued vector of dimension $n$, $c$ and $d$ are real-valued nonnegative vectors of dimension $n$, $Q$ is a symmetric positive semidefinite matrix of dimension $n$ by $n$, and $A_i$ are symmetric positive semidefinite matrices of dimension $m$ by $m$ for $i=0,...,n$.
+where $\rho \ge 0$, $b \in R^n$, $c\in R^n_+$, $d\in R^n_+$, $Q \in S^n_+$, $A_0 \in S^m_{++}$ and $A_i \in S^{m}_+$ for $i=1,...,n$.
 The performance of *s*MBA is compared with CVX using the SDPT3 solver.
 For further details, please refer to our paper in [[1]].
 
 # Matlab source codes
 - **demo_NSDP.m**\
-A demo of the numerical experiments in [[1]].
+A demo that evaluates the effect of different decay rates of $\{\mu_k\}$ as described in [[1]].
+
+- **demo_NSDP_rs.m**\
+A demo that tests sMBA across a range of problem dimensions, as presented in [[1]].
 
 - **NSDP.m**\
 A function that generates the data of a convex NSDP.
