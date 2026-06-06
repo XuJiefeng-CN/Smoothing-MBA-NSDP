@@ -244,7 +244,7 @@ while k<=opt.maxiter
 
     df1 = dx + cx + Qx + obj.b;
     delta_f = df1 - df;
-    Lf = max(L_check, Lf/2);
+    Lf = min(L_hat, max(L_check, Lf/2));
 
     % calculate BB stepsize: Lf_bb1
     if sqrt(ss)>1e-12
