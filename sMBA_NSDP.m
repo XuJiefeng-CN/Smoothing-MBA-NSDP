@@ -232,7 +232,7 @@ while k<=opt.maxiter
     dh_x1mu1 = U*(dh_x1mu1.*U'); % nabla h_mu
     dg_x1mu1 = -(const.A*reshape(dh_x1mu1, [], 1));
     delta_g = mu*(dg_x1mu1 - dg_mu);
-    Lg = max(L_check, Lg/2);
+    Lg = min(L_hat, max(L_check, Lg/2));
 
     % calculate BB stepsize: Lg_bb2
     if sqrt(abs(delta_g'*s))>1e-12
