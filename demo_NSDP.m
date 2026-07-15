@@ -98,7 +98,7 @@ for jj = 1:length(rbars)
         opt.rbar, opt.sbar, psi_temp, g_temp, time_temp, ...
         out_temp.k, mean(out_temp.ls(:,2),'all'), out_temp.mu0, out_temp.mu, out_temp.L_mu, out_temp.status);
 
-    fprintf(fID_table, '%27s & $(%4.2g, %1d)$ & $%12.5f$ & $%7.1f$\\\\\n',...
+    fprintf(fID_table, '%27s & $(%4.2g, %1d)$ & $%12.6f$ & $%7.1f$\\\\\n',...
         style_tex{t}, rbars(jj), sbars(ii), psi_vals{t}, times(t));
 end
 end
@@ -134,7 +134,7 @@ fprintf(fID, '%4s %3s | %10.10f | %9.2e | %8.5f\n', ...
     '', 'cvx', cvx_optval, g_cvx, time_cvx);
 fprintf(fID, '-------------------------------------------------------------------------------------------\n\n');
 
-fprintf(fID_table, '%28s &  %4s  & $%12.5f$ & $%7.1f$ \n', '', 'cvx', cvx_optval, time_cvx);
+fprintf(fID_table, '%28s &  %4s  & $%12.6f$ & $%7.1f$ \n', '', 'cvx', cvx_optval, time_cvx);
 fprintf(fID_table, '----------------------------------------------------------------------\n\n');
 fclose(fID);
 fclose(fID_table);
